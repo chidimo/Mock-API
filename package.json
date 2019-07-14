@@ -1,0 +1,25 @@
+{
+  "name": "mock-api",
+  "version": "1.0.0",
+  "description": "Spin up a mock API server",
+  "main": "index.js",
+  "repository": "https://github.com/chidimo/Mock-API.git",
+  "author": "Chidi Orji <orjichidi95@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint ./src",
+    "generateMockData": "babel-node API/generateMockData",
+    "prestartMockApi": "yarn generateMockData",
+    "startMockApi": "json-server --watch API/db.json --port 3001"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "chance": "^1.0.18",
+    "faker": "^4.1.0",
+    "json-schema-faker": "^0.5.0-rc17",
+    "json-server": "^0.15.0"
+  }
+}
