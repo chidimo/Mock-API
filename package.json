@@ -9,8 +9,8 @@
   "scripts": {
     "lint": "./node_modules/.bin/eslint ./src",
     "generateMockData": "babel-node API/generateMockData",
-    "prestartMockApi": "yarn generateMockData",
-    "startMockApi": "json-server --watch API/db.json --port 3001"
+    "prestart": "yarn generateMockData",
+    "start": "json-server --watch API/db.json --port 3001"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",
