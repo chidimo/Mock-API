@@ -10,7 +10,8 @@
     "lint": "./node_modules/.bin/eslint ./src",
     "generateMockData": "babel-node API/generateMockData",
     "prestart": "yarn generateMockData",
-    "start": "json-server --watch API/db.json --port 3001"
+    "start": "json-server --watch API/db.json --port 3001",
+    "startScores": "json-server scores.js --port 3001"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.0",

@@ -6,13 +6,16 @@ import Chance from 'chance';
 
 import userSchema from './schema/userSchema';
 import accountsSchema from './schema/accountsSchema';
+import scoreSchema from './schema/scoreSchema';
 
 jsf.extend('faker', () => faker);
 jsf.extend('chance', () => new Chance());
 
 const users = jsf.generate(userSchema);
 const accounts = jsf.generate(accountsSchema);
-const dbs = JSON.stringify({ users, accounts });
+const scores = jsf.generate(scoreSchema)
+
+const dbs = JSON.stringify({ users, accounts, scores });
 
 const db_path = path.resolve(__dirname, 'db.json');
 console.log('write path', db_path)
